@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --clr-background-primary: #e6e6ff;
 }
 
 @theme inline {
@@ -30,4 +31,14 @@ body {
 
 .animatedButton {
   animation-duration: 5s;
+}
+
+.ql-container {
+  border: none !important;
+}
+.ql-toolbar {
+  border: none !important;
+}
+.ql-editor {
+  border: none !important;
 }

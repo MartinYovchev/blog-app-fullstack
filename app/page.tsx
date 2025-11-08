@@ -1,6 +1,8 @@
 import Link from 'next/link';
-import { Button } from './builders/Button';
+// import { Button } from './builders/Button';
 import { MainCategories } from './components/MainCategories';
+import { FeaturedPosts } from './components/FeaturedPosts';
+import { PostList } from './components/PostList';
 
 export default function Home() {
   return (
@@ -21,7 +23,7 @@ export default function Home() {
             for placeholder for the description of the blog post.
           </p>
         </div>
-        <Link href="/write" className="hidden md:block relative">
+        {/* <Link href="/write" className="hidden md:block relative">
           <svg
             viewBox="0 0 200 200"
             width="200"
@@ -52,9 +54,14 @@ export default function Home() {
               <polyline points="9 6 18 6 18 15" />
             </svg>
           </Button>
-        </Link>
+        </Link> */}
       </div>
       <MainCategories />
+      <FeaturedPosts />
+      <div className="">
+        <h1 className="my-8 text-2xl text-gray-600">Recent Posts</h1>
+        <PostList />
+      </div>
     </div>
   );
 }

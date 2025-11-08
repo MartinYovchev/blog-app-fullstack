@@ -1,3 +1,5 @@
+'use client';
+
 import { buildSrc, Image as ImageKit } from '@imagekit/next';
 import { useState } from 'react';
 
@@ -9,7 +11,7 @@ export type ImageProps = {
   className?: string;
 };
 
-export const Image = ({ path, alt, width = 100, height = 100, className }: ImageProps) => {
+export const Image = ({ path, alt, width = 735, height = 490, className }: ImageProps) => {
   const [showPlaceholder, setShowPlaceholder] = useState(true);
 
   return (
@@ -19,6 +21,12 @@ export const Image = ({ path, alt, width = 100, height = 100, className }: Image
       alt={alt}
       loading="lazy"
       width={width}
+      transformation={[
+        {
+          width: width,
+          height: height,
+        },
+      ]}
       style={
         showPlaceholder
           ? {

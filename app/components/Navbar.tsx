@@ -22,7 +22,7 @@ export const Navbar = () => {
         <div
           className={`w-full h-screen flex flex-col transition-all 
             ease-in-out duration-300 items-center  gap-8 font-medium text-lg 
-            justify-center absolute top-16 ${openDesktopNav ? '-right-0' : '-right-[100%]'}`}
+            justify-center absolute top-16 ${openDesktopNav ? '-right-0 bg-[#e6e6ff]' : '-right-[100%]'}`}
         >
           <Link href="/">Home</Link>
           <Link href="/trending">Trending</Link>
